@@ -1,0 +1,9 @@
+{% extends 'blog/blog_base.html' %}
+
+{% block conteudo %}
+    {{ object.titulo }}
+    {{ object.conteudo }}
+    <br>
+    <a href="{% url 'editar' object.pk %}">Editar Postagem</a> | 
+    <a href="{% url 'remover' object.pk %}">Remover Postagem</a>
+{% endblock conteudo %}

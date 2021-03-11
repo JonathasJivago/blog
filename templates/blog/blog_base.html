@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Blog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
 <body>
+    <a class="c1" href="{% url 'lista' %}">Home</a>
+    <a href="{% url 'nova' %}">Nova Postagem</a>
     <h2>Meu Blog!</h2>
+    {% block conteudo %}
+    {% endblock conteudo %}
+      <div class="buttons">
+        <button class="button is-info">Informação</button>
+        <button class="button is-success">Sucesso</button>
+        <button class="button is-warning">Alerta</button>
+        <button class="button is-danger">Perigo</button>
+      </div>
 </body>
 </html>
